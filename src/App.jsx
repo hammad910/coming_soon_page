@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import mobileImg from './assets/mobile-img.png';
 
 const App = () => {
+  // Calculate target date for countdown
   const targetDate = new Date();
   targetDate.setDate(targetDate.getDate() + 26); // Add 26 days
   targetDate.setHours(3, 35, 39); // Set the hours, minutes, and seconds
 
+  // State to hold remaining time
   const [remainingTime, setRemainingTime] = useState(calculateTimeLeft());
 
+  // Function to calculate time left
   function calculateTimeLeft() {
     const now = new Date().getTime();
     const difference = targetDate - now;
@@ -35,6 +38,7 @@ const App = () => {
     };
   }
 
+  // Update remaining time every second
   useEffect(() => {
     const timer = setInterval(() => {
       setRemainingTime(calculateTimeLeft());
@@ -43,20 +47,20 @@ const App = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Format time component to include leading zero if needed
   const formatTimeComponent = (value) => {
     return value < 10 ? `0${value}` : value;
   };
 
   return (
-    <div className='flex md:flex-row flex-col justify-center items-center w-full max-w-[90%] mx-auto mt-20'>
+    <div className='flex md:flex-row flex-col justify-between items-center w-full max-w-[90%] mx-auto mt-20'>
       <div className='w-full md:w-[50%] sm:mr-6'>
-        <div className='text-2xl sm:text-4xl md:text-2xl lg:3xl'>
-          <h1 className='base:mb-6'>We are</h1>
-          <h1 className='leading-[1]'>Coming soon...</h1>
+        <div className='text-2xl sm:text-4xl md:text-4xl lg:4xl'>
+          <h1 className='base:mb-6'>We are</h1> {/* Section title */}
+          <h1 className='leading-[1]'>Coming soon...</h1> {/* Subtitle */}
         </div>
         <p className='opacity-70 mt-10 leading-6 sm:text-lg text:md'>
-          Subscribe Now & Save!
-
+          Subscribe Now & Save! {/* Description */}
           Register your email before we launch and get R50 off your first delivery. Stay ahead with the latest updates and exclusive offers delivered right to your inbox. Don't miss out, subscribe and save!
         </p>
         <div className='w-[100%] mx-auto mt-10'>
@@ -89,7 +93,7 @@ const App = () => {
           <input
             type='email'
             placeholder='Enter your email address'
-            className='w-full h-12 border border-gray-300 text-lg rounded-md py-2 pl-10 pr-4 focus:outline-none focus:border-blue-400'
+            className='w-full h-14 border border-gray-300 text-lg rounded-md py-2 pl-10 pr-4 focus:outline-none focus:border-blue-400'
             style={{ fontFamily: 'Poppins' }}
           />
           <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
@@ -116,10 +120,11 @@ const App = () => {
         </div>
       </div>
       <div className=' mt-10 md:mt-0'>
-        <img src={mobileImg} alt='' />
+        <img src={mobileImg} alt='mobile-img' className='w-[1000px]' /> {/* Mobile image */}
       </div>
     </div>
   );
 };
 
 export default App;
+``
