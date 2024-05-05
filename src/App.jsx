@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import mobileImg from './assets/mobile-img.png';
+import logo from './assets/logo.png';
 
 const App = () => {
   // Calculate target date for countdown
@@ -53,9 +54,13 @@ const App = () => {
   };
 
   return (
-    <div className='flex md:flex-row flex-col justify-between items-center w-full max-w-[90%] mx-auto mt-20'>
+    <div className='flex md:flex-row flex-col justify-between items-center w-full max-w-[90%] mx-auto mt-10'>
+      {/* logo */}
       <div className='w-full md:w-[50%] sm:mr-6'>
         <div className='text-2xl sm:text-4xl md:text-4xl lg:4xl'>
+      <div>
+        <img src={logo} alt='logo' className='w-[15%] pb-10' /> {/* Mobile image */}
+      </div>
           <h1 className='base:mb-6'>We are</h1> {/* Section title */}
           <h1 className='leading-[1]'>Coming soon...</h1> {/* Subtitle */}
         </div>
