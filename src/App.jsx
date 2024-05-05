@@ -48,14 +48,16 @@ const App = () => {
   };
 
   return (
-    <div className='flex sm:flex-row flex-col justify-center items-center w-full max-w-[90%] mx-auto mt-2'>
-      <div className='w-full sm:w-[50%] sm:mr-6'>
-        <div className='text-4xl sm:text-2xl md:text-2xl lg:3xl'>
+    <div className='flex md:flex-row flex-col justify-center items-center w-full max-w-[90%] mx-auto mt-20'>
+      <div className='w-full md:w-[50%] sm:mr-6'>
+        <div className='text-2xl sm:text-4xl md:text-2xl lg:3xl'>
           <h1 className='base:mb-6'>We are</h1>
-          <h1>Coming soon...</h1>
+          <h1 className='leading-[1]'>Coming soon...</h1>
         </div>
-        <p className='opacity-70 mt-10 leading-6'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptas totam voluptatem quos.
+        <p className='opacity-70 mt-10 leading-6 sm:text-lg text:md'>
+          Subscribe Now & Save!
+
+          Register your email before we launch and get R50 off your first delivery. Stay ahead with the latest updates and exclusive offers delivered right to your inbox. Don't miss out, subscribe and save!
         </p>
         <div className='w-[100%] mx-auto mt-10'>
           <table className='min-w-full rounded-lg overflow-hidden'>
@@ -83,7 +85,6 @@ const App = () => {
             </tbody>
           </table>
         </div>
-
         <div className='relative mt-14'>
           <input
             type='email'
@@ -114,8 +115,8 @@ const App = () => {
           </button>
         </div>
       </div>
-      <div className='w-full sm:w-[50%] flex justify-center mt-8 sm:mt-0'>
-        <img src={mobileImg} alt='' className='w-full max-w-md sm:max-w-none' />
+      <div className=' mt-10 md:mt-0'>
+        <img src={mobileImg} alt='' />
       </div>
     </div>
   );
