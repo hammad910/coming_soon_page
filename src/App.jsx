@@ -50,39 +50,40 @@ const App = () => {
   return (
     <div className='flex sm:flex-row flex-col justify-center items-center w-full max-w-[90%] mx-auto mt-2'>
       <div className='w-full sm:w-[50%] sm:mr-6'>
-        <div className='base:text-2xl md:text-2xl lg:3xl'>
-          <h1 className='md:mb-6'>We are</h1>
+        <div className='text-4xl sm:text-2xl md:text-2xl lg:3xl'>
+          <h1 className='base:mb-6'>We are</h1>
           <h1>Coming soon...</h1>
         </div>
         <p className='opacity-70 mt-10 leading-6'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptas totam voluptatem quos.
         </p>
-        <div className='max-w-screen-md mx-auto mt-10'>
+        <div className='w-[100%] mx-auto mt-10'>
           <table className='min-w-full rounded-lg overflow-hidden'>
-            <tbody className='text-lg text-center'>
-              <tr className='text-4xl md:flex justify-evenly'>
-                <td className='px-4 py-2'>{formatTimeComponent(remainingTime.days)}</td>
-                <td className='px-4 py-2 sm:hidden'></td>
-                <td className='px-4 py-2'>{formatTimeComponent(remainingTime.hours)}</td>
+            <thead className='text-black text-4xl md:text-5xl'>
+              <tr>
+                <th className='base:px-4 sm:px-2 base:py-2'>{formatTimeComponent(remainingTime.days)}</th>
+                <th className='base:px-4 sm:px-2 base:py-2'>:</th>
+                <th className='base:px-4 sm:px-2 base:py-2'>{formatTimeComponent(remainingTime.hours)}</th>
+                <th className='base:px-4 sm:px-2 base:py-2'>:</th>
+                <th className='base:px-4 sm:px-2 base:py-2'>{formatTimeComponent(remainingTime.minutes)}</th>
+                <th className='base:px-4 sm:px-2 base:py-2'>:</th>
+                <th className='base:px-4 sm:px-2 base:py-2'>{formatTimeComponent(remainingTime.seconds)}</th>
               </tr>
-              <tr className='md:flex justify-evenly'>
-                <td className='px-4 py-2'>Days</td>
-                <td className='px-4 py-2 sm:hidden'></td>
-                <td className='px-4 py-2'>Hours</td>
-              </tr>
-              <tr className='text-4xl md:flex justify-evenly'>
-                <td className='px-4 py-2'>{formatTimeComponent(remainingTime.minutes)}</td>
-                <td className='px-4 py-2 sm:hidden'></td>
-                <td className='px-4 py-2'>{formatTimeComponent(remainingTime.seconds)}</td>
-              </tr>
-              <tr className='md:flex justify-evenly'>
-                <td className='px-4 py-2'>Minutes</td>
-                <td className='px-4 py-2 sm:hidden'></td>
-                <td className='px-4 py-2'>Seconds</td>
+            </thead>
+            <tbody className='text-sm text-center'>
+              <tr>
+                <td className='base:px-4 sm:px-2 base:py-2'>Days</td>
+                <td className='base:px-4 sm:px-2 base:py-2'></td>
+                <td className='base:px-4 sm:px-2 base:py-2'>Hours</td>
+                <td className='base:px-4 sm:px-2 base:py-2'></td>
+                <td className='base:px-4 sm:px-2 base:py-2'>Minutes</td>
+                <td className='base:px-4 sm:px-2 base:py-2'></td>
+                <td className='base:px-4 sm:px-2 base:py-2'>Seconds</td>
               </tr>
             </tbody>
           </table>
         </div>
+
         <div className='relative mt-14'>
           <input
             type='email'

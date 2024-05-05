@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-	background-image: url('./assets/bg-check.png');
+body {
+	background-image: url('./assets/bg-color.png');
 	background-size: cover;
 	background-position: top center;
-} */
+}
+
+
